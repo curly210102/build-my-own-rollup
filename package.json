@@ -4,7 +4,7 @@
   "description": "Build My Own Rollup",
   "main": "index.js",
   "scripts": {
-    "build": "tsc src/rollup/rollup.ts --outDir dist"
+    "build": "tsc src/rollup/rollup.ts --outDir dist --target es2020"
   },
   "license": "MIT"
 }
