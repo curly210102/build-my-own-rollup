@@ -1,0 +1,10 @@
+{
+  "name": "build-my-own-rollup",
+  "version": "0.0.1",
+  "description": "Build My Own Rollup",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc src/rollup/rollup.ts --outDir dist"
+  },
+  "license": "MIT"
+}
