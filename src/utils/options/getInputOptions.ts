@@ -1,5 +1,6 @@
 import {
   GenericConfigObject,
+  InputOptions,
   NormalizedInputOptions,
 } from "../../rollup/types";
 
@@ -12,13 +13,13 @@ export function getInputOptions(
   return normalizeInputOptions(rawInputOptions);
 }
 
-function normalizeInputOptions(config) {
+function normalizeInputOptions(config: InputOptions) {
   return {
     input: getInput(config.input),
   };
 }
 
-function getInput(rawInput) {
+function getInput(rawInput: InputOptions["input"]) {
   return rawInput == null
     ? []
     : typeof rawInput === "string"

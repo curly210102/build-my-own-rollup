@@ -4,7 +4,14 @@
   "description": "Build My Own Rollup",
   "main": "index.js",
   "scripts": {
-    "build": "tsc src/rollup/rollup.ts --outDir dist --target es2020"
+    "build": "node ./esbuild.js"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.1",
+    "@types/node": "^16.11.7"
+  },
+  "dependencies": {
+    "esbuild": "^0.13.13"
+  }
 }

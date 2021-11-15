@@ -7,6 +7,10 @@ export interface GenericConfigObject {
   [key: string]: unknown;
 }
 
+export interface InputOptions {
+  input?: string | string[] | { [entryAlias: string]: string };
+}
+
 export interface NormalizedInputOptions {
   input: string[] | { [entryAlias: string]: string };
 }
@@ -86,4 +90,29 @@ export interface SourceMap {
   version: number;
   toString(): string;
   toUrl(): string;
+}
+
+export type ResolveIdResult = string | undefined;
+
+export interface RollupLogProps {
+  code?: string;
+  frame?: string;
+  hook?: string;
+  id?: string;
+  loc?: {
+    column: number;
+    file?: string;
+    line: number;
+  };
+  message: string;
+  name?: string;
+  plugin?: string;
+  pluginCode?: string;
+  pos?: number;
+  url?: string;
+}
+
+export type ResolvedId = string;
+export interface ResolvedIdMap {
+  [key: string]: ResolvedId;
 }
